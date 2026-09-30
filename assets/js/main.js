@@ -9,9 +9,40 @@
   var year = document.getElementById("year");
   if (year) year.textContent = String(new Date().getFullYear());
 
+  // Light/dark toggle: follows the system until the visitor picks one, then remembers it
+  var root = document.documentElement;
+  var themeBtn = document.querySelector(".theme-toggle");
+  var systemDark = window.matchMedia("(prefers-color-scheme: dark)");
+  var isDark = function () {
+    var t = root.getAttribute("data-theme");
+    return t ? t === "dark" : systemDark.matches;
+  };
+  var syncThemeUi = function () {
+    var dark = isDark();
+    if (themeBtn) themeBtn.setAttribute("aria-label", dark ? "Switch to light mode" : "Switch to dark mode");
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute("content", dark ? "#0d1524" : "#21314d");
+  };
+  if (themeBtn) {
+    themeBtn.addEventListener("click", function () {
+      var next = isDark() ? "light" : "dark";
+      root.setAttribute("data-theme", next);
+      try { localStorage.setItem("theme", next); } catch (e) {}
+      syncThemeUi();
+    });
+  }
+  if (systemDark.addEventListener) systemDark.addEventListener("change", syncThemeUi);
+  syncThemeUi();
+
   // Mobile menu
   var toggle = document.querySelector(".nav__toggle");
   var links = document.getElementById("nav-links");
+  var closeMenu = function () {
+    if (!links || !links.classList.contains("open")) return;
+    links.classList.remove("open");
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.textContent = "Menu";
+  };
   if (toggle && links) {
     toggle.addEventListener("click", function () {
       var open = links.classList.toggle("open");
@@ -19,11 +50,7 @@
       toggle.textContent = open ? "Close" : "Menu";
     });
     links.addEventListener("click", function (e) {
-      if (e.target.closest("a") && links.classList.contains("open")) {
-        links.classList.remove("open");
-        toggle.setAttribute("aria-expanded", "false");
-        toggle.textContent = "Menu";
-      }
+      if (e.target.closest("a")) closeMenu();
     });
   }
 
@@ -38,7 +65,9 @@
     });
   });
   document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape") document.querySelectorAll('.note[aria-expanded="true"]').forEach(function (n) { n.setAttribute("aria-expanded", "false"); });
+    if (e.key !== "Escape") return;
+    document.querySelectorAll('.note[aria-expanded="true"]').forEach(function (n) { n.setAttribute("aria-expanded", "false"); });
+    if (links && links.classList.contains("open")) { closeMenu(); toggle.focus(); }
   });
   document.addEventListener("click", function (e) {
     if (!e.target.closest(".note")) document.querySelectorAll('.note[aria-expanded="true"]').forEach(function (n) { n.setAttribute("aria-expanded", "false"); });
@@ -85,7 +114,7 @@
       var max = document.documentElement.scrollHeight - window.innerHeight;
       var p = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
       // Stop the pole short of the standards so the "bar" stays visible on the right
-      var track = progress.clientWidth - 46;
+      var track = progress.clientWidth - 40;
       var cleared = p > 0.985;
       pole.style.width = (p * track) + "px";
       // Once cleared, the vaulter sails past the standards and lands on the far side

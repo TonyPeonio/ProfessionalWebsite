@@ -7,6 +7,8 @@
   <meta name="description" content="Tony Peonio is a computer science student at Colorado School of Mines working on computational protein design and multi-agent AI, heading to a PhD in computational biology.">
   <meta name="author" content="Tony Peonio">
   <meta name="theme-color" content="#21314d">
+  <meta name="color-scheme" content="light dark">
+  <link rel="canonical" href="https://tonypeonio.github.io/ProfessionalWebsite/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Tony Peonio · Blueprints to Proteins">
   <meta property="og:description" content="Computer science at Colorado School of Mines, computational protein design, multi-agent AI, and NCAA pole vault.">
@@ -17,8 +19,25 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <script>document.documentElement.classList.add("js");</script>
+  <link rel="stylesheet" href="assets/css/style.css?v=2">
+  <script>
+    // Runs before paint: mark JS as available and apply a saved light/dark choice (no flash)
+    document.documentElement.classList.add("js");
+    try { var t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t); } catch (e) {}
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Tony Peonio",
+    "url": "https://tonypeonio.github.io/ProfessionalWebsite/",
+    "image": "https://tonypeonio.github.io/ProfessionalWebsite/assets/img/og-image.png",
+    "email": "mailto:Tony_Peonio@Mines.edu",
+    "affiliation": { "@type": "CollegeOrUniversity", "name": "Colorado School of Mines", "url": "https://www.mines.edu/" },
+    "knowsAbout": ["Computational protein design", "Cyclic peptide design", "Multi-agent AI", "GPCR signaling", "Quantum information", "Machine learning for structural biology"],
+    "sameAs": ["https://github.com/TonyPeonio"]
+  }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -26,7 +45,7 @@
   <div class="progress" aria-hidden="true">
     <div class="progress__pole"></div>
     <div class="progress__vaulter"></div>
-    <svg class="progress__bar" viewBox="0 0 26 18"><line class="standard" x1="3" y1="2" x2="3" y2="18"/><line class="standard" x1="23" y1="2" x2="23" y2="18"/><line class="crossbar" x1="3" y1="5" x2="23" y2="5"/></svg>
+    <svg class="progress__bar" viewBox="0 0 20 4"><line class="crossbar" x1="0" y1="2" x2="20" y2="2"/></svg>
   </div>
 
   <header class="nav">
@@ -35,17 +54,22 @@
         <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="1" y="1" width="30" height="30" rx="7" fill="#21314d"/><path d="M7 9h10M12 9v14M18 23V9h4.5a4 4 0 0 1 0 8H18" stroke="#cfdce9" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="25" cy="24" r="2.2" fill="#cc4628"/></svg>
         Tony Peonio
       </a>
-      <button class="nav__toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
-      <ul class="nav__links" id="nav-links">
-        <li><a href="#blueprints">01 Blueprints</a></li>
-        <li><a href="#mines">02 Mines</a></li>
-        <li><a href="#pivot">03 Pivot</a></li>
-        <li><a href="#oregon">04 Oregon</a></li>
-        <li><a href="#agents">05 Agents</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#giving-back">Giving back</a></li>
-        <li><a href="#next">Next</a></li>
-      </ul>
+      <div class="nav__right">
+        <ul class="nav__links" id="nav-links">
+          <li><a href="#blueprints">Story</a></li>
+          <li><a href="#pivot">Research</a></li>
+          <li><a href="#oregon">Oregon</a></li>
+          <li><a href="#agents">Agents</a></li>
+          <li><a href="#timeline">Timeline</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Toggle light and dark mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z" fill="currentColor"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
+        </button>
+        <button class="nav__toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      </div>
     </div>
   </header>
 
@@ -234,6 +258,59 @@
       </div>
     </section>
 
+    <!-- TIMELINE =========================================================== -->
+    <section class="chapter" id="timeline" aria-labelledby="h-timeline">
+      <div class="wrap">
+        <div class="reveal">
+          <p class="sheet-label">Build log</p>
+          <h2 id="h-timeline">The short version</h2>
+          <p class="prose">The same story as a construction schedule. Dashed entries are planned, not finished.</p>
+        </div>
+        <ol class="timeline">
+          <li class="reveal">
+            <span class="when">2021 to 2024</span>
+            <h3>College courses in high school</h3>
+            <p>Took dual-enrollment classes at three Washington colleges while finishing high school in Kalama.</p>
+          </li>
+          <li class="reveal">
+            <span class="when">Fall 2024</span>
+            <h3>Started at Colorado School of Mines</h3>
+            <p>Computer science, a Quantum Engineering minor, and the track and field team.</p>
+          </li>
+          <li class="reveal">
+            <span class="when">Fall 2025</span>
+            <h3>First research</h3>
+            <p>Joined the Honors VIPER quantum materials course and the AMBER air-quality group, and started taking graduate-level courses in quantum information.</p>
+          </li>
+          <li class="reveal">
+            <span class="when">Spring 2026</span>
+            <h3>Protein design and AI agents</h3>
+            <p>Won the Mines Protein Engineering Competition and joined Dr. Lincoln Carr's group to study multi-agent AI.</p>
+          </li>
+          <li class="reveal">
+            <span class="when">Summer 2026</span>
+            <h3>Oregon and RosettaCon</h3>
+            <p>Rosetta Commons NSF REU in the Hosseinzadeh Lab, then a lightning talk and poster at RosettaCon 2026.</p>
+          </li>
+          <li class="reveal">
+            <span class="when">Fall 2026</span>
+            <h3>Senior year</h3>
+            <p>Field session with Kirin Autonomy, mentoring first-generation students back home, and still working with the Hosseinzadeh Lab.</p>
+          </li>
+          <li class="reveal planned-item">
+            <span class="when">May 2027</span>
+            <h3>Graduate from Mines</h3>
+            <p>Three years after starting.</p>
+          </li>
+          <li class="reveal planned-item">
+            <span class="when">Fall 2027</span>
+            <h3>Start a PhD</h3>
+            <p>Computational and systems biology.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
     <!-- PROJECTS =========================================================== -->
     <section class="chapter" id="projects" aria-labelledby="h-projects">
       <div class="wrap">
@@ -295,6 +372,20 @@
             <h3>More on the way</h3>
             <p>This parts list gets longer every semester.</p>
           </article>
+        </div>
+
+        <div class="talks reveal">
+          <h3>Talks and presentations</h3>
+          <ul>
+            <li>
+              <span class="when">RosettaCon 2026</span>
+              <span><strong>Lightning talk and poster.</strong> "Computational design of FPR2-specific cyclic peptides for resolution of chronic inflammation"</span>
+            </li>
+            <li>
+              <span class="when">Mines Bioinformatics Club</span>
+              <span><strong>Guest talk.</strong> An introduction to protein design for other students</span>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
@@ -375,6 +466,6 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/main.js?v=2" defer></script>
 </body>
 </html>

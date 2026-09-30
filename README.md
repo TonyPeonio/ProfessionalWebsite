@@ -14,12 +14,15 @@ Live: https://tonypeonio.github.io/ProfessionalWebsite/
 | `assets/img/` | Favicon and the social preview image (`og-image.png`, 1200×630). |
 | `404.html` | The not-found page. It uses absolute `/ProfessionalWebsite/` paths. |
 | `.nojekyll` | Tells GitHub Pages to serve the files as-is. |
+| `sitemap.xml` | For Google Search Console. Update `lastmod` when content changes. |
 
 ## Editing content
 
 - **Add a project:** copy one `<article class="project reveal">` block inside `#projects`. Use a `tag`, an `h3`, one problem line, and one `result` line. Add `<span class="status">In progress</span>` if it isn't finished.
 - **Margin notes** (the dotted-underline pop-ups) look like `<button class="note" type="button" data-note="Note text">underlined words</button>`.
 - **Colors** live in `:root` at the top of `style.css`.
+- **After editing CSS or JS,** bump the `?v=` number on the `style.css` and `main.js` links in `index.html` so returning visitors get the new files.
+- **Timeline:** add or edit `<li>` items in `#timeline`. Add `planned-item` to the class for anything not finished yet.
 - Keep the REU section at the level of what was presented publicly at RosettaCon 2026 until the lab clears more detail.
 
 ## Preview locally
