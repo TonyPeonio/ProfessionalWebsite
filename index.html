@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=2">
+  <link rel="stylesheet" href="assets/css/style.css?v=3">
   <script>
     // Runs before paint: mark JS as available and apply a saved light/dark choice (no flash)
     document.documentElement.classList.add("js");
@@ -31,11 +31,11 @@
     "@type": "Person",
     "name": "Tony Peonio",
     "url": "https://tonypeonio.github.io/ProfessionalWebsite/",
-    "image": "https://tonypeonio.github.io/ProfessionalWebsite/assets/img/og-image.png",
+    "image": "https://tonypeonio.github.io/ProfessionalWebsite/assets/img/headshot.jpg",
     "email": "mailto:Tony_Peonio@Mines.edu",
     "affiliation": { "@type": "CollegeOrUniversity", "name": "Colorado School of Mines", "url": "https://www.mines.edu/" },
     "knowsAbout": ["Computational protein design", "Cyclic peptide design", "Multi-agent AI", "GPCR signaling", "Quantum information", "Machine learning for structural biology"],
-    "sameAs": ["https://github.com/TonyPeonio"]
+    "sameAs": ["https://github.com/TonyPeonio", "https://www.linkedin.com/in/tony-peonio-3b819534a/"]
   }
   </script>
 </head>
@@ -91,6 +91,14 @@
               <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
               Email
             </a>
+            <a class="btn" href="https://www.linkedin.com/in/tony-peonio-3b819534a/" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4v11H3v-11Zm6.5 0h3.8v1.5h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1v5.45h-4v-4.83c0-1.15-.02-2.63-1.6-2.63-1.6 0-1.85 1.25-1.85 2.55v4.91h-4v-11Z"/></svg>
+              LinkedIn
+            </a>
+            <a class="btn" href="assets/Tony_Peonio_Resume.pdf" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5Z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>
+              Resume
+            </a>
           </div>
           <dl class="spec">
             <div><dt>Studying</dt><dd>B.S. Computer Science, Mines '27</dd></div>
@@ -99,33 +107,12 @@
           </dl>
         </div>
 
-        <figure class="drawing" aria-labelledby="drawing-cap">
-          <svg viewBox="0 0 500 400" role="img" aria-label="A blueprint of a house that fades while a protein ribbon is drawn over it">
-            <g class="house">
-              <path class="draw" pathLength="1000" style="--len:1000" d="M110 205 L250 95 L390 205"/>
-              <rect class="draw" pathLength="1000" style="--len:1000" x="130" y="200" width="240" height="120"/>
-              <rect class="draw" pathLength="1000" style="--len:1000" x="228" y="255" width="44" height="65"/>
-              <rect class="draw" pathLength="1000" style="--len:1000" x="152" y="228" width="46" height="36"/>
-              <rect class="draw" pathLength="1000" style="--len:1000" x="302" y="228" width="46" height="36"/>
-              <line class="draw" pathLength="1000" style="--len:1000" x1="175" y1="228" x2="175" y2="264"/>
-              <line class="draw" pathLength="1000" style="--len:1000" x1="325" y1="228" x2="325" y2="264"/>
-            </g>
-            <g class="dims">
-              <line x1="130" y1="345" x2="370" y2="345"/><line x1="130" y1="337" x2="130" y2="353"/><line x1="370" y1="337" x2="370" y2="353"/>
-              <text x="250" y="362" text-anchor="middle">SCALE 1 : 1,000,000,000</text>
-              <line x1="405" y1="200" x2="405" y2="320"/><line x1="397" y1="200" x2="413" y2="200"/><line x1="397" y1="320" x2="413" y2="320"/>
-            </g>
-            <g class="ribbon-group">
-              <path class="ribbon-shadow draw" pathLength="1000" style="--len:1000" d="M58 300 C 100 170, 160 150, 195 230 S 270 330, 305 230 S 380 110, 445 175"/>
-              <path class="ribbon draw" pathLength="1000" style="--len:1000" d="M58 300 C 100 170, 160 150, 195 230 S 270 330, 305 230 S 380 110, 445 175"/>
-            </g>
-            <g class="title-block">
-              <rect x="318" y="22" width="162" height="46" rx="3"/>
-              <text x="328" y="41">DRAWN BY: T. PEONIO</text>
-              <text x="328" y="58">HOUSE → PROTEIN</text>
-            </g>
-          </svg>
-          <figcaption class="caption" id="drawing-cap">Same idea, smaller scale.</figcaption>
+        <figure class="portrait">
+          <picture>
+            <source srcset="assets/img/headshot.webp" type="image/webp">
+            <img src="assets/img/headshot.jpg" width="640" height="800" alt="Tony Peonio, smiling, in a light blue checked shirt outdoors">
+          </picture>
+          <figcaption class="portrait__tag"><span>Tony Peonio</span><span>Golden, Colorado</span></figcaption>
         </figure>
       </div>
     </section>
@@ -140,15 +127,47 @@
           <p>I am a first-generation college student. When I left for Colorado School of Mines, nobody else from my high school class moved to Colorado, so I started without connections in science. I built them the slow way: I emailed researchers whose work I respected and asked everyone I met for introductions until the calls started happening.</p>
           <p>A protein, it turns out, is also a structure built from a plan. It is just <button class="note" type="button" data-note="Roughly. A house is about ten meters across; a small protein is a few nanometers.">scaled down by a billion</button>.</p>
         </div>
+        <div class="aside-stack">
+        <figure class="drawing reveal">
+          <svg viewBox="0 0 500 400" role="img" aria-label="A blueprint of a house that fades while a protein, with a coiled helix and two strand arrows, is drawn over it">
+            <g class="house">
+              <path class="draw" pathLength="1000" style="--len:1000" d="M110 205 L250 95 L390 205"/>
+              <rect class="draw" pathLength="1000" style="--len:1000" x="130" y="200" width="240" height="120"/>
+              <rect class="draw" pathLength="1000" style="--len:1000" x="228" y="255" width="44" height="65"/>
+              <rect class="draw" pathLength="1000" style="--len:1000" x="152" y="228" width="46" height="36"/>
+              <rect class="draw" pathLength="1000" style="--len:1000" x="302" y="228" width="46" height="36"/>
+            </g>
+            <g class="dims">
+              <line x1="130" y1="345" x2="370" y2="345"/><line x1="130" y1="337" x2="130" y2="353"/><line x1="370" y1="337" x2="370" y2="353"/>
+              <text x="250" y="362" text-anchor="middle">SCALE 1 : 1,000,000,000</text>
+            </g>
+            <g class="ribbon-group">
+              <path class="loop draw" pathLength="1000" style="--len:1000" d="M48 305 C 58 250, 70 190, 90 170"/>
+              <path class="ribbon draw" pathLength="1000" style="--len:1000" d="M90.0 170.0 L88.5 170.4 L87.1 171.5 L85.9 173.3 L84.7 175.7 L83.8 178.8 L83.2 182.4 L82.9 186.4 L82.8 190.7 L83.2 195.3 L83.9 200.0 L85.0 204.7 L86.4 209.3 L88.2 213.6 L90.3 217.6 L92.7 221.2 L95.4 224.3 L98.3 226.7 L101.4 228.5 L104.5 229.6 L107.8 230.0 L111.0 229.6 L114.2 228.5 L117.3 226.7 L120.2 224.3 L122.8 221.2 L125.2 217.6 L127.4 213.6 L129.2 209.3 L130.6 204.7 L131.7 200.0 L132.4 195.3 L132.7 190.7 L132.7 186.4 L132.4 182.4 L131.7 178.8 L130.8 175.7 L129.7 173.3 L128.4 171.5 L127.0 170.4 L125.6 170.0 L124.1 170.4 L122.7 171.5 L121.4 173.3 L120.3 175.7 L119.4 178.8 L118.8 182.4 L118.4 186.4 L118.4 190.7 L118.7 195.3 L119.4 200.0 L120.5 204.7 L122.0 209.3 L123.7 213.6 L125.9 217.6 L128.3 221.2 L131.0 224.3 L133.9 226.7 L136.9 228.5 L140.1 229.6 L143.3 230.0 L146.6 229.6 L149.7 228.5 L152.8 226.7 L155.7 224.3 L158.4 221.2 L160.8 217.6 L162.9 213.6 L164.7 209.3 L166.1 204.7 L167.2 200.0 L167.9 195.3 L168.3 190.7 L168.3 186.4 L167.9 182.4 L167.3 178.8 L166.4 175.7 L165.3 173.3 L164.0 171.5 L162.6 170.4 L161.1 170.0 L159.7 170.4 L158.3 171.5 L157.0 173.3 L155.8 175.7 L154.9 178.8 L154.3 182.4 L154.0 186.4 L154.0 190.7 L154.3 195.3 L155.0 200.0 L156.1 204.7 L157.5 209.3 L159.3 213.6 L161.4 217.6 L163.8 221.2 L166.5 224.3 L169.4 226.7 L172.5 228.5 L175.7 229.6 L178.9 230.0 L182.1 229.6 L185.3 228.5 L188.4 226.7 L191.3 224.3 L193.9 221.2 L196.4 217.6 L198.5 213.6 L200.3 209.3 L201.7 204.7 L202.8 200.0 L203.5 195.3 L203.8 190.7 L203.8 186.4 L203.5 182.4 L202.8 178.8 L201.9 175.7 L200.8 173.3 L199.5 171.5 L198.1 170.4 L196.7 170.0 L195.2 170.4 L193.8 171.5 L192.5 173.3 L191.4 175.7 L190.5 178.8 L189.9 182.4 L189.5 186.4 L189.5 190.7 L189.9 195.3 L190.6 200.0 L191.6 204.7 L193.1 209.3 L194.9 213.6 L197.0 217.6 L199.4 221.2 L202.1 224.3 L205.0 226.7 L208.0 228.5 L211.2 229.6 L214.4 230.0 L217.7 229.6 L220.9 228.5 L223.9 226.7 L226.8 224.3 L229.5 221.2 L231.9 217.6 L234.0 213.6 L235.8 209.3 L237.3 204.7 L238.3 200.0 L239.0 195.3 L239.4 190.7 L239.4 186.4 L239.0 182.4 L238.4 178.8 L237.5 175.7 L236.4 173.3 L235.1 171.5 L233.7 170.4 L232.2 170.0 L230.8 170.4 L229.4 171.5 L228.1 173.3 L227.0 175.7 L226.1 178.8 L225.4 182.4 L225.1 186.4 L225.1 190.7 L225.4 195.3 L226.1 200.0 L227.2 204.7 L228.6 209.3 L230.4 213.6 L232.5 217.6 L234.9 221.2 L237.6 224.3 L240.5 226.7 L243.6 228.5 L246.8 229.6 L250.0 230.0"/>
+              <path class="loop draw" pathLength="1000" style="--len:1000" d="M250 230 C 272 250, 292 170, 300 136"/>
+              <polygon class="strand draw" pathLength="1000" style="--len:1000" points="291,136 309,136 309,268 318,268 300,298 282,268 291,268"/>
+              <path class="loop draw" pathLength="1000" style="--len:1000" d="M300 298 C 306 332, 344 332, 350 298"/>
+              <polygon class="strand draw" pathLength="1000" style="--len:1000" points="341,298 359,298 359,166 368,166 350,136 332,166 341,166"/>
+              <path class="loop draw" pathLength="1000" style="--len:1000" d="M350 136 C 362 100, 410 92, 448 118"/>
+            </g>
+            <g class="title-block">
+              <rect x="318" y="22" width="162" height="46" rx="3"/>
+              <text x="328" y="41">HOUSE → PROTEIN</text>
+              <text x="328" y="58">SHEET 01 · DETAIL</text>
+            </g>
+          </svg>
+          <figcaption class="caption">Same idea, smaller scale.</figcaption>
+        </figure>
         <aside class="aside-card reveal" aria-label="Quick facts">
           <p class="kicker">Title block</p>
           <ul class="facts">
             <li><span><strong>From</strong> Kalama, Washington</span></li>
-            <li><span><strong>First</strong> in my family to earn a college degree, as of May 2027</span></li>
+            <li><span><strong>First-generation</strong> college student</span></li>
             <li><span><strong>Grew up</strong> on my family's job sites</span></li>
             <li><span><strong>At Mines</strong> since Fall 2024</span></li>
           </ul>
         </aside>
+        </div>
       </div>
     </section>
 
@@ -159,21 +178,13 @@
           <p class="sheet-label">Sheet 02 · Mines</p>
           <h2 id="h-mines">Computer science, with some quantum on the side.</h2>
           <p>I came to Mines to study computer science because I wanted to connect the digital world to the physical one. I added a minor in Quantum Engineering, and by my second year I was taking graduate courses in quantum information alongside my undergraduate classes.</p>
-          <p>I am finishing my degree in three years, mostly to save on tuition, and I have kept a 4.0 along the way.</p>
+          <p>I am finishing my degree in three years and have kept a 4.0 along the way.</p>
           <p>Outside of class, I lead the Society of Quantum Engineers as president, serve on the Student-Athlete Advisory Committee, and help run a campus wellness club as treasurer.</p>
         </div>
         <aside class="aside-card vault reveal" aria-labelledby="h-vault">
           <p class="kicker">The other half of my day</p>
           <h3 id="h-vault">Pole vault</h3>
-          <svg viewBox="0 0 300 130" aria-hidden="true">
-            <line class="std" x1="222" y1="30" x2="222" y2="118"/><line class="std" x1="262" y1="30" x2="262" y2="118"/>
-            <line class="bar" x1="222" y1="42" x2="262" y2="42"/>
-            <path class="arc" d="M40 118 Q 160 -30 250 32"/>
-            <path class="pole" d="M40 118 Q 120 96 176 40"/>
-            <line x1="8" y1="118" x2="292" y2="118" stroke="rgba(207,220,233,0.35)" stroke-width="2"/>
-          </svg>
           <p>I compete for Mines in NCAA Division II track and field. In high school I won the state title twice; at Mines, I have qualified for the conference championships in three of my four chances so far.</p>
-          <p>I never <button class="note" type="button" data-note="A no-height means missing all three attempts at your opening height, so you score nothing.">no-heighted</button> in high school. College has been more humbling.</p>
         </aside>
       </div>
     </section>
@@ -232,7 +243,7 @@
           <h3>Presenting the work</h3>
           <p>At the end of the summer I gave a lightning talk and presented a poster at RosettaCon 2026.</p>
           <p class="talk"><span class="mono">Lightning talk + poster</span>Computational design of FPR2-specific cyclic peptides for resolution of chronic inflammation</p>
-          <p>Earlier that year, at an APS conference, I felt like an outsider looking in. At RosettaCon, after months in the literature, I had long conversations at posters and over meals, and I finally felt like an equal in the scientific community. A student from another university also told me they were using my open-source pipeline, which was a <button class="note" type="button" data-note="One known user. It still counts.">surreal thing to hear</button>.</p>
+          <p>Earlier that year, at an APS conference, I felt like an outsider looking in. At RosettaCon, after months in the literature, I had long conversations at posters and over meals, and I finally felt like an equal in the scientific community.</p>
         </div>
       </div>
     </section>
@@ -243,15 +254,14 @@
         <div class="prose reveal">
           <p class="sheet-label">Sheet 05 · Agents</p>
           <h2 id="h-agents">What happens when AI agents work together?</h2>
-          <p>Back at Mines, I reached out to Dr. Lincoln Carr and joined his group to study how small language models communicate, and what emerges when many AI agents interact over time, including long-term manipulation online. Dr. Carr gave me a lot of freedom in what to explore.</p>
-          <p>I used that freedom to build an agentic "pharmacologist" that designed p53–MDM2 inhibitors while the target mutated to escape them, a small model of tumor resistance. The pharmacologist won easily against a single evolving target. The more useful result was the reason: resistance is hard in real life because of the size of the mutational space and the delay of wet-lab validation, not because of any single design problem.</p>
-          <p>This work is a big part of why I am interested in AI safety and biosecurity research. The same tools that design proteins and coordinate agents deserve careful study.</p>
+          <p>Back at Mines, I reached out to Dr. Lincoln Carr and joined his group, where I study how communities of AI agents interact and what behaviors emerge when they do.</p>
+          <p>Protein design taught me what one model can do. This work is about what happens when many of them are connected, and it is a big part of why I am interested in AI safety and biosecurity research. The same tools that design proteins and coordinate agents deserve careful study.</p>
         </div>
         <aside class="aside-card reveal" aria-label="Research threads">
           <p class="kicker">Open questions I keep coming back to</p>
           <ul class="facts">
             <li><span>How do behaviors emerge in communities of interacting agents?</span></li>
-            <li><span>Where does a design agent stop being the bottleneck?</span></li>
+            <li><span>What changes when AI agents work on science together?</span></li>
             <li><span>How should powerful design tools be evaluated and kept safe?</span></li>
           </ul>
         </aside>
@@ -295,7 +305,7 @@
           <li class="reveal">
             <span class="when">Fall 2026</span>
             <h3>Senior year</h3>
-            <p>Field session with Kirin Autonomy, mentoring first-generation students back home, and still working with the Hosseinzadeh Lab.</p>
+            <p>Field session with Kirin Autonomy, still working with the Hosseinzadeh Lab, and getting ready to mentor first-generation students back home.</p>
           </li>
           <li class="reveal planned-item">
             <span class="when">May 2027</span>
@@ -342,13 +352,6 @@
             <a class="more" href="#oregon">Read the story →</a>
           </article>
           <article class="project reveal">
-            <span class="tag">Multi-agent AI · Carr Group</span>
-            <h3>Agentic pharmacologist</h3>
-            <p>Can an AI agent keep designing inhibitors while its target mutates to escape?</p>
-            <p class="result">Easily, for one target. The hard part of resistance is scale and lab delay.</p>
-            <a class="more" href="#agents">Read the story →</a>
-          </article>
-          <article class="project reveal">
             <span class="tag">Mines × Kirin Autonomy</span>
             <span class="status">In progress · Fall 2026</span>
             <h3>Adaptive chess AI</h3>
@@ -381,10 +384,6 @@
               <span class="when">RosettaCon 2026</span>
               <span><strong>Lightning talk and poster.</strong> "Computational design of FPR2-specific cyclic peptides for resolution of chronic inflammation"</span>
             </li>
-            <li>
-              <span class="when">Mines Bioinformatics Club</span>
-              <span><strong>Guest talk.</strong> An introduction to protein design for other students</span>
-            </li>
           </ul>
         </div>
       </div>
@@ -400,16 +399,12 @@
         </div>
         <div class="service">
           <div class="aside-card reveal">
-            <p class="kicker">Rural first-gen mentoring</p>
-            <p>This fall I contacted my old high school's college counselor, and I now mentor several first-generation students interested in STEM or athletics over email and video calls. I am recruiting other Mines students to expand to more rural schools.</p>
+            <p class="planned">Starting soon</p>
+            <p><strong>Rural first-gen mentoring.</strong> I am working with my old high school's college counselor to mentor first-generation students interested in STEM or athletics, and I hope to bring in other Mines students to reach more rural schools.</p>
           </div>
           <div class="aside-card reveal">
             <p class="kicker">Student Advisory Board for Quantum Programs</p>
             <p>As an invited member of this multi-university board, I analyzed departmental data on undergraduates in graduate courses. Part of my experience was presented in the program evaluators' talk at the NSF NRT conference, and the board's mentorship proposals are now before faculty.</p>
-          </div>
-          <div class="aside-card reveal">
-            <p class="kicker">Teaching protein design</p>
-            <p>After the competition, the Bioinformatics Club invited me back as a guest speaker to teach protein design to other students.</p>
           </div>
           <div class="aside-card reveal">
             <p class="planned">Planned, not done yet</p>
@@ -437,6 +432,7 @@
             <li><span>De novo peptide and binder design</span></li>
             <li><span>Systems pharmacology and kinetic modeling</span></li>
             <li><span>Machine learning for structural biology</span></li>
+            <li><span>Cyclic peptides for neurological and mental health therapeutics</span></li>
             <li><span>AI safety and biosecurity</span></li>
           </ul>
         </aside>
@@ -449,10 +445,12 @@
         <div class="contact__card reveal">
           <p class="sheet-label" style="color: var(--mines-sky)">Sheet 08 · Contact</p>
           <h2 id="h-contact">Say hello.</h2>
-          <p>If you work on protein design, multi-agent AI, AI safety, or biosecurity, or you are a first-generation student figuring out research, I would be glad to hear from you.</p>
+          <p>I am especially interested in cyclic peptide design and neurological pharmaceuticals, and in the long run I want to help build treatments for mental health diseases. If you work on any of that, or on protein design, multi-agent AI, AI safety, or biosecurity, I would be glad to hear from you. The same goes for first-generation students figuring out research.</p>
           <div class="hero__actions">
             <a class="btn btn--primary" href="mailto:Tony_Peonio@Mines.edu">Tony_Peonio@Mines.edu</a>
+            <a class="btn" href="https://www.linkedin.com/in/tony-peonio-3b819534a/" rel="noopener">LinkedIn</a>
             <a class="btn" href="https://github.com/TonyPeonio" rel="noopener">GitHub</a>
+            <a class="btn" href="assets/Tony_Peonio_Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
           </div>
         </div>
       </div>
@@ -462,10 +460,10 @@
   <footer class="site-footer">
     <div class="wrap">
       <span>© <span id="year">2026</span> Tony Peonio · Golden, Colorado</span>
-      <span>Drafted in Mines blue · Hand-coded, no frameworks</span>
+      <span>Drafted in Mines blue · Built without a framework</span>
     </div>
   </footer>
 
-  <script src="assets/js/main.js?v=2" defer></script>
+  <script src="assets/js/main.js?v=3" defer></script>
 </body>
 </html>

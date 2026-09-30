@@ -216,6 +216,26 @@ html:not(.js) .theme-toggle { display: none; }
   position: absolute; left: 14px; top: 12px; right: 190px; color: var(--mines-sky);
   font: 0.72rem var(--font-mono); letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.85;
 }
+.drawing .loop { stroke: var(--mines-orange); stroke-width: 3; fill: none; stroke-linecap: round; }
+.drawing .strand { stroke: var(--mines-orange); stroke-width: 2.5; fill: rgba(204, 70, 40, 0.3); stroke-linejoin: round; }
+
+/* Hero portrait: a photo pinned to the drawing board */
+.portrait { position: relative; margin: 0 auto; width: 100%; max-width: 420px; }
+.portrait picture, .portrait img {
+  display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--radius);
+}
+.portrait picture { position: relative; box-shadow: var(--shadow); border-radius: var(--radius); }
+.portrait::before, .portrait::after {
+  content: ""; position: absolute; width: 44px; height: 44px; border: 3px solid var(--accent-strong); z-index: 1; pointer-events: none;
+}
+.portrait::before { top: -10px; left: -10px; border-right: 0; border-bottom: 0; border-radius: 8px 0 0 0; }
+.portrait::after { bottom: 38px; right: -10px; border-left: 0; border-top: 0; border-radius: 0 0 8px 0; }
+.portrait__tag {
+  display: flex; justify-content: space-between; gap: 12px; margin-top: 12px; padding-top: 10px; border-top: 1px dashed var(--line);
+  font: 0.75rem var(--font-mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted);
+}
+.aside-stack { display: grid; gap: 20px; align-content: start; }
+
 @keyframes draw { to { stroke-dashoffset: 0; } }
 @keyframes fade-house { to { opacity: 0.22; } }
 
