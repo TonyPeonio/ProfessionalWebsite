@@ -2,7 +2,7 @@
 
 Tony Peonio's personal site: **Blueprints to Proteins**. It's plain HTML, CSS, and JavaScript, with no build step and no dependencies.
 
-Live: https://tonypeonio.github.io/ProfessionalWebsite/
+Live: https://tonypeonio.us/
 
 ## Files
 
@@ -37,6 +37,8 @@ Then open http://localhost:8000.
 
 1. Push to `main`.
 2. In the repo, go to **Settings → Pages → Build and deployment**. Set **Source** to *Deploy from a branch*, and choose **Branch** `main` and folder `/ (root)`.
-3. The site publishes at https://tonypeonio.github.io/ProfessionalWebsite/ within a minute or two.
+3. The site publishes at https://tonypeonio.us/ within a minute or two.
 
-All paths in `index.html` are relative, so the site also works on a custom domain later. If you add one, update the `og:url` and `og:image` meta tags and the absolute paths in `404.html`.
+The custom domain is set by the `CNAME` file. DNS for `tonypeonio.us` has A/AAAA records at the apex pointing to GitHub Pages, plus a `www` CNAME to `tonypeonio.github.io`. The old https://tonypeonio.github.io/ProfessionalWebsite/ address redirects to the custom domain.
+
+The canonical URL, `og:url`, `og:image`, JSON-LD, and `sitemap.xml` all use `https://tonypeonio.us/`, and `404.html` uses root-relative paths. If the domain ever changes, update those.
