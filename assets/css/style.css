@@ -366,6 +366,15 @@ html:not(.js) .theme-toggle { display: none; }
 @media (min-width: 900px) { .reu__intro { padding: 96px 0 36px; } }
 .reu__split { position: relative; display: grid; color: #fff; isolation: isolate; }
 @media (min-width: 900px) { .reu__split { grid-template-columns: 1fr 1fr; } }
+/* white pinstripes just inside the top and bottom edges of the color band */
+.reu__split::before, .reu__split::after {
+  content: ""; position: absolute; left: 0; right: 0; height: 3px; background: #fff; z-index: 3; pointer-events: none;
+}
+.reu__split::before { top: 10px; }
+.reu__split::after { bottom: 10px; }
+/* the seam sits in the Rosetta half and traces the Oregon half's slanted edge, top right to bottom left */
+.reu__seam { position: absolute; top: 0; left: 0; z-index: 2; pointer-events: none; overflow: visible; }
+.reu__seam line { stroke: #fff; stroke-width: 3; vector-effect: non-scaling-stroke; }
 .reu__half { position: relative; padding: 48px var(--gutter) 56px; }
 @media (min-width: 900px) { .reu__half { padding: 72px 56px 80px; } }
 .reu__half--uo {
@@ -382,14 +391,12 @@ html:not(.js) .theme-toggle { display: none; }
   /* diagonal seam: the Oregon half overlaps the Rosetta half with a slanted edge */
   .reu__half--uo { clip-path: polygon(0 0, 100% 0, calc(100% - 64px) 100%, 0 100%); margin-right: -64px; z-index: 1; padding-right: 110px; }
   .reu__half--rc { padding-left: 110px; }
-  .reu__seam {
-    position: absolute; top: 0; bottom: 0; left: calc(50% - 32px); width: 64px; z-index: 2; pointer-events: none;
-    background: linear-gradient(to bottom right, transparent calc(50% - 2px), var(--uo-yellow) calc(50% - 2px), var(--rc-teal-light) calc(50% + 2px), transparent calc(50% + 2px));
-  }
+  .reu__seam { width: 64px; height: 100%; }
 }
 @media (max-width: 899px) {
   .reu__half--uo { clip-path: polygon(0 0, 100% 0, 100% calc(100% - 28px), 0 100%); padding-bottom: 76px; margin-bottom: -28px; z-index: 1; }
   .reu__half--rc { padding-top: 64px; }
+  .reu__seam { width: 100%; height: 28px; }
 }
 .reu__half .kicker { font: 0.75rem var(--font-mono); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 10px; }
 .reu__half--uo .kicker { color: var(--uo-yellow); }
