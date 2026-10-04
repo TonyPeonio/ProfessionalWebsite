@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=6">
+  <link rel="stylesheet" href="assets/css/style.css?v=7">
   <script>
     // Runs before paint: mark JS as available and apply a saved light/dark choice (no flash)
     document.documentElement.classList.add("js");
@@ -62,6 +62,7 @@
           <li><a href="#agents">Agents</a></li>
           <li><a href="#timeline">Timeline</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="websites/">Websites</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
         <button class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Toggle light and dark mode">
@@ -78,6 +79,11 @@
     <section class="hero" id="top">
       <div class="wrap">
         <div>
+          <a class="hire-chip" href="websites/">
+            <span class="hire-chip__swatch" aria-hidden="true"></span>
+            <span><strong>Now booking:</strong> websites for small businesses</span>
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
           <p class="sheet-label">Sheet 00 · Cover</p>
           <h1>Building the frontier of software. <span class="hl">Engineering the future of medicine.</span></h1>
           <p class="hero__lede">I am a computer science student at Colorado School of Mines, with a minor in Quantum Engineering. I work on computational protein design and on how AI agents behave when they work together. I graduate in May 2027 and plan to start a PhD in computational and systems biology that fall.</p>
@@ -907,6 +913,13 @@
             <p>My first research project: computational discovery of new quantum materials.</p>
             <p class="result">Where I learned research, and where I learned I wanted to work on biology.</p>
           </article>
+          <article class="project reveal">
+            <span class="tag">HTML · CSS · JavaScript · Supabase</span>
+            <h3>Websites for small businesses</h3>
+            <p>Many small-town businesses have no website, or one that works against them.</p>
+            <p class="result">Built a home builder's site and client portal, this site, and a student club's site. Now taking new clients.</p>
+            <a class="more" href="websites/">See the work and plans →</a>
+          </article>
           <article class="project project--ghost reveal">
             <span class="tag">Sheet pending</span>
             <h3>More on the way</h3>
@@ -1001,6 +1014,6 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js?v=3" defer></script>
+  <script src="assets/js/main.js?v=4" defer></script>
 </body>
 </html>

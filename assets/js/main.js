@@ -87,7 +87,7 @@
   }
 
   // Active chapter in the nav
-  var navLinks = Array.prototype.slice.call(document.querySelectorAll(".nav__links a"));
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.nav__links a[href^="#"]'));
   var sections = navLinks.map(function (a) { return document.querySelector(a.getAttribute("href")); }).filter(Boolean);
   if ("IntersectionObserver" in window && sections.length) {
     var current = null;
@@ -128,4 +128,51 @@
     window.addEventListener("resize", update);
     update();
   }
+
+  // ---- Websites page --------------------------------------------------------
+
+  // Live previews: shrink each 1280px-wide iframe to fit its browser window
+  var views = document.querySelectorAll(".browser__view");
+  if (views.length && "ResizeObserver" in window) {
+    var ro = new ResizeObserver(function (entries) {
+      entries.forEach(function (entry) {
+        entry.target.style.setProperty("--scale", String(entry.target.clientWidth / 1280));
+      });
+    });
+    views.forEach(function (v) { ro.observe(v); });
+  }
+
+  // Portal demo: switch between what the owner sees and what one client sees
+  document.querySelectorAll(".portal").forEach(function (portal) {
+    var buttons = portal.querySelectorAll(".portal__toggle button");
+    buttons.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        portal.setAttribute("data-view", btn.getAttribute("data-view"));
+        buttons.forEach(function (b) { b.setAttribute("aria-pressed", String(b === btn)); });
+      });
+    });
+  });
+
+  // "Try it" button that flips the real light/dark toggle
+  document.querySelectorAll("[data-theme-demo]").forEach(function (btn) {
+    btn.addEventListener("click", function () { if (themeBtn) themeBtn.click(); });
+  });
+
+  // Stripe Payment Links: a button with a link in data-stripe becomes a checkout button;
+  // without one it stays an email link, and the "not switched on yet" note stays visible
+  var payButtons = document.querySelectorAll("[data-stripe]");
+  var anyStripe = false;
+  payButtons.forEach(function (a) {
+    var link = a.getAttribute("data-stripe");
+    if (!/^https:\/\/(buy|checkout)\.stripe\.com\//.test(link)) return;
+    anyStripe = true;
+    a.href = link;
+    if (a.getAttribute("data-label")) a.textContent = a.getAttribute("data-label");
+  });
+  var pending = document.querySelector(".pay__pending");
+  if (pending && anyStripe) pending.hidden = true;
+
+  // After checkout, Stripe sends people back to /websites/?paid=1#pay
+  var thanks = document.querySelector(".thanks");
+  if (thanks && /[?&]paid=1\b/.test(window.location.search)) thanks.hidden = false;
 })();
