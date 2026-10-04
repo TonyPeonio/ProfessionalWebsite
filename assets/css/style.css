@@ -642,6 +642,24 @@ html:not(.js) .theme-toggle { display: none; }
 .band--sqe .stat { border-color: rgba(33, 49, 77, 0.3); background: #fff; }
 .band--sqe a:not(.btn) { color: var(--sqe-navy); }
 
+/* Client testimonials: a short one in the hero, the full one in the FCH band */
+.shout { margin: 22px 0 0; padding: 14px 18px; border-left: 4px solid var(--fch-gold); border-radius: 0 12px 12px 0; background: var(--surface); box-shadow: var(--shadow); }
+.shout blockquote { margin: 0; }
+.shout p { margin: 0; font: 600 1.1rem/1.4 var(--font-head); color: var(--ink); }
+.shout figcaption { margin-top: 6px; font: 0.78rem var(--font-mono); color: var(--muted); }
+.testimonial {
+  position: relative; margin: 0; padding: 26px 22px 20px; border-radius: 12px;
+  background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(242, 194, 0, 0.35);
+}
+.testimonial::before {
+  content: "“"; position: absolute; top: -14px; left: 18px; padding: 0 6px; background: #262626; border-radius: 6px;
+  font: 600 3rem/1 "Quicksand", var(--font-head); color: var(--fch-gold);
+}
+.testimonial blockquote { margin: 0; }
+.testimonial p { margin: 0 0 12px; color: #fff; font: 500 1.02rem/1.6 "Quicksand", var(--font-body); }
+.testimonial figcaption { margin-top: 4px; font: 600 0.9rem var(--font-body); color: var(--fch-gold); }
+.testimonial figcaption span { display: block; font: 0.72rem var(--font-mono); letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255, 255, 255, 0.65); font-weight: 400; }
+
 /* Live preview of a site, scaled down inside a browser window */
 .browser { margin: 0; border-radius: 12px; overflow: hidden; background: #fff; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 22px 48px rgba(0, 0, 0, 0.32); }
 .browser__bar { display: flex; align-items: center; gap: 7px; padding: 8px 12px; background: #e9ecef; color: #3f4650; font: 0.72rem var(--font-mono); }
